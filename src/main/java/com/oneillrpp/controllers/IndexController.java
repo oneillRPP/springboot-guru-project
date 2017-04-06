@@ -1,11 +1,11 @@
-package com.oneillrpp;
+package com.oneillrpp.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /*
-     @Author: oneillRPP
- */
+    @Author: oneillRPP
+*/
 
 @Controller
 public class IndexController {
@@ -14,5 +14,6 @@ public class IndexController {
     String index() {
         return "index";
     }
+
 
 }
