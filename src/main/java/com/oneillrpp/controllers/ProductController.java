@@ -7,6 +7,7 @@ package com.oneillrpp.controllers;
 import com.oneillrpp.entities.Product;
 import com.oneillrpp.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -54,6 +55,11 @@ public class ProductController {
         productService.saveProduct(product);
 
         return "redirect:/product/" + product.getId();
+    }
+
+    @RequestMapping(value="/login", method=RequestMethod.GET)
+    public String login(){
+        return "login";
     }
 
 }
